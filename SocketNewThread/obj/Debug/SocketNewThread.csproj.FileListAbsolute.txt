@@ -1,0 +1,6 @@
+C:\新建文件夹\Projects 4\SocketThreadTest\SocketNewThread\bin\Debug\SocketNewThread.exe.config
+C:\新建文件夹\Projects 4\SocketThreadTest\SocketNewThread\bin\Debug\SocketNewThread.exe
+C:\新建文件夹\Projects 4\SocketThreadTest\SocketNewThread\bin\Debug\SocketNewThread.pdb
+C:\新建文件夹\Projects 4\SocketThreadTest\SocketNewThread\obj\Debug\SocketNewThread.csprojResolveAssemblyReference.cache
+C:\新建文件夹\Projects 4\SocketThreadTest\SocketNewThread\obj\Debug\SocketNewThread.exe
+C:\新建文件夹\Projects 4\SocketThreadTest\SocketNewThread\obj\Debug\SocketNewThread.pdb

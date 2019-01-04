@@ -1,0 +1,6 @@
+C:\新建文件夹\Projects 4\SocketThreadTest\SocketAsync\bin\Debug\SocketAsync.exe.config
+C:\新建文件夹\Projects 4\SocketThreadTest\SocketAsync\bin\Debug\SocketAsync.exe
+C:\新建文件夹\Projects 4\SocketThreadTest\SocketAsync\bin\Debug\SocketAsync.pdb
+C:\新建文件夹\Projects 4\SocketThreadTest\SocketAsync\obj\Debug\SocketAsync.csprojResolveAssemblyReference.cache
+C:\新建文件夹\Projects 4\SocketThreadTest\SocketAsync\obj\Debug\SocketAsync.exe
+C:\新建文件夹\Projects 4\SocketThreadTest\SocketAsync\obj\Debug\SocketAsync.pdb
