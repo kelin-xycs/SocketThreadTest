@@ -41,15 +41,14 @@ namespace SocketTask
 
         private static async Task Receive(Socket clientSocket)
         {
-
-            byte[] b = new byte[clientSocket.ReceiveBufferSize];
+            byte[] b = new byte[2];
 
             //while (true)
             //{
             try
             {
                 var receiveNumber = await Task.Factory.FromAsync(
-                    (cb, o) => clientSocket.BeginReceive(b, 0, clientSocket.ReceiveBufferSize, SocketFlags.None, cb, o)
+                    (cb, o) => clientSocket.BeginReceive(b, 0, 2, SocketFlags.None, cb, o)
                     , clientSocket.EndReceive, null);
                 await Task.Factory.FromAsync((cb, o) => clientSocket.BeginSend(b, 0, b.Length, SocketFlags.None, cb, o), clientSocket.EndSend, null);
 
