@@ -53,22 +53,24 @@ namespace SocketThreadPool
 
             byte[] b = new byte[2];
 
-            while (true)
-            {
+            //while (true)
+            //{
                 try
                 {
                     //通过clientSocket接收数据
                     int receiveNumber = myClientSocket.Receive(b);
                     myClientSocket.Send(b);
+
+                    ThreadPool.QueueUserWorkItem(Receive, clientSocket);
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
                     myClientSocket.Shutdown(SocketShutdown.Both);
                     myClientSocket.Close();
-                    break;
+                    //break;
                 }
-            }
+            //}
         }
     }
 }
