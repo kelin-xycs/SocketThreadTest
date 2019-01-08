@@ -9,7 +9,7 @@ using System.Net.Sockets;
 
 using System.Threading;
 
-namespace SocketThreadPool
+namespace SocketThreadPoolBegin
 {
     class Program
     {
@@ -18,9 +18,6 @@ namespace SocketThreadPool
 
         static void Main(string[] args)
         {
-            //ThreadPool.BindHandle()
-            //ThreadPool.SetMaxThreads(4, 10);
-
             IPAddress ip = IPAddress.Parse("127.0.0.1");
             serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             serverSocket.Bind(new IPEndPoint(ip, myProt));  //绑定IP地址：端口
@@ -37,9 +34,9 @@ namespace SocketThreadPool
             {
                 Socket clientSocket = serverSocket.Accept();
 
-                
+
                 //  用 线程池
-                
+
                 ThreadPool.QueueUserWorkItem(Receive, clientSocket);
 
                 //Thread receiveThread = new Thread(Receive);
@@ -47,9 +44,16 @@ namespace SocketThreadPool
             }
         }
 
-        private static void Receive(object clientSocket)
+        private static void Receive(object o)
         {
-            Socket myClientSocket = (Socket)clientSocket;
+
+            Socket myClientSocket = o as Socket;
+
+            if (myClientSocket == null)
+            {
+                myClientSocket = (Socket)((IAsyncResult)o).AsyncState;
+            }
+            
 
             byte[] b = new byte[2];
 
@@ -58,10 +62,11 @@ namespace SocketThreadPool
                 try
                 {
                     //通过clientSocket接收数据
-                    int receiveNumber = myClientSocket.Receive(b);
-                    myClientSocket.Send(b);
+                    //int receiveNumber = myClientSocket.Receive(b);
+                    //myClientSocket.Send(b);
 
-                    ThreadPool.QueueUserWorkItem(Receive, clientSocket);
+                    myClientSocket.BeginReceive(b, 0, 2, SocketFlags.None, Send, myClientSocket);
+                    //ThreadPool.QueueUserWorkItem(Receive, clientSocket);
                 }
                 catch (Exception ex)
                 {
@@ -71,6 +76,26 @@ namespace SocketThreadPool
                     //break;
                 }
             //}
+        }
+
+        private static void Send(IAsyncResult ar)
+        {
+            Socket s = (Socket)ar.AsyncState;
+
+            byte[] b = new byte[] { 98, 98 };
+
+            try
+            { 
+                //s.BeginSend(b, 0, 2, SocketFlags.None, Receive, s);
+                s.Send(b);
+                Receive(s);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                s.Shutdown(SocketShutdown.Both);
+                s.Close();
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 C:\新建文件夹\Projects 4\SocketThreadTest\SocketThreadPool\bin\Debug\SocketThreadPool.exe.config
 C:\新建文件夹\Projects 4\SocketThreadTest\SocketThreadPool\bin\Debug\SocketThreadPool.exe
 C:\新建文件夹\Projects 4\SocketThreadTest\SocketThreadPool\bin\Debug\SocketThreadPool.pdb
-C:\新建文件夹\Projects 4\SocketThreadTest\SocketThreadPool\obj\Debug\SocketThreadPool.csprojResolveAssemblyReference.cache
 C:\新建文件夹\Projects 4\SocketThreadTest\SocketThreadPool\obj\Debug\SocketThreadPool.exe
 C:\新建文件夹\Projects 4\SocketThreadTest\SocketThreadPool\obj\Debug\SocketThreadPool.pdb
+C:\新建文件夹\Projects 4\SocketThreadTest\SocketThreadPool\obj\Debug\SocketThreadPool.csprojResolveAssemblyReference.cache
