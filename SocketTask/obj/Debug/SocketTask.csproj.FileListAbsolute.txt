@@ -1,0 +1,7 @@
+D:\Projs\netProj\SocketThreadTest\SocketTask\bin\Debug\SocketTask.exe.config
+D:\Projs\netProj\SocketThreadTest\SocketTask\bin\Debug\SocketTask.exe
+D:\Projs\netProj\SocketThreadTest\SocketTask\bin\Debug\SocketTask.pdb
+D:\Projs\netProj\SocketThreadTest\SocketTask\obj\Debug\SocketTask.csprojAssemblyReference.cache
+D:\Projs\netProj\SocketThreadTest\SocketTask\obj\Debug\SocketTask.csproj.CoreCompileInputs.cache
+D:\Projs\netProj\SocketThreadTest\SocketTask\obj\Debug\SocketTask.exe
+D:\Projs\netProj\SocketThreadTest\SocketTask\obj\Debug\SocketTask.pdb
